@@ -6,5 +6,5 @@
 * Nice and simple design.
 * Result screen when finished.
 
-### Beginning Exercise
+### Result
 ![alt](https://i.imgur.com/5sKEGSe.gif)
