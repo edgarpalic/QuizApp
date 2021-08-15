@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizQuestionsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="What country does this flag belong to?"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_question"
+            app:layout_constraintStart_toStartOf="@+id/tv_question"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question"
+            app:srcCompat="@drawable/ic_flag_of_argentina" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:indeterminate="false"
+            android:max="10"
+            android:minHeight="30dp"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="@+id/tv_question"
+            app:layout_constraintStart_toStartOf="@+id/tv_question"
+            app:layout_constraintTop_toBottomOf="@+id/iv_image" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:letterSpacing="0.2"
+            android:text="0/10"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <TextView
+            android:id="@+id/tv_option_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_question_background"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="10dp"
+            android:text="Apple"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toBottomOf="@+id/tvProgress" />
+
+        <TextView
+            android:id="@+id/tv_option_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_question_background"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="10dp"
+            android:text="Banana"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_option_one"
+            app:layout_constraintStart_toStartOf="@+id/tv_option_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_option_one" />
+
+        <TextView
+            android:id="@+id/tv_option_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_question_background"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="10dp"
+            android:text="Carrot"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_option_two"
+            app:layout_constraintStart_toStartOf="@+id/tv_option_two"
+            app:layout_constraintTop_toBottomOf="@+id/tv_option_two" />
+
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_question_background"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="10dp"
+            android:text="Durian"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_option_three"
+            app:layout_constraintStart_toStartOf="@+id/tv_option_three"
+            app:layout_constraintTop_toBottomOf="@+id/tv_option_three" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_blue"
+            android:fontFamily="sans-serif-condensed-light"
+            android:letterSpacing="0.2"
+            android:padding="10dp"
+            android:text="SUBMIT"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_option_four"
+            app:layout_constraintStart_toStartOf="@+id/tv_option_four"
+            app:layout_constraintTop_toBottomOf="@+id/tv_option_four" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
